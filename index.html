@@ -1,0 +1,1241 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Klinik Pratama Salsabiluna — Peluang Investasi</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy: #0B1D3A;
+  --gold: #C5A55A;
+  --gold-light: #E8D5A3;
+  --cream: #FAF7F0;
+  --white: #FFFFFF;
+  --slate: #4A5568;
+  --light-blue: #EDF4F8;
+  --teal: #1A7A6D;
+  --teal-light: #E6F5F2;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  color: var(--navy);
+  background: var(--cream);
+  overflow-x: hidden;
+}
+
+/* ─── HERO ─── */
+.hero {
+  min-height: 100vh;
+  background: linear-gradient(135deg, var(--navy) 0%, #14304D 50%, #1A3D5C 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 60px 24px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -200px;
+  right: -200px;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(197,165,90,0.15) 0%, transparent 70%);
+  animation: floatOrb 8s ease-in-out infinite;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: -150px;
+  left: -150px;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(26,122,109,0.1) 0%, transparent 70%);
+  animation: floatOrb 10s ease-in-out infinite reverse;
+}
+
+@keyframes floatOrb {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(30px, -20px); }
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(197,165,90,0.15);
+  border: 1px solid rgba(197,165,90,0.3);
+  padding: 8px 20px;
+  border-radius: 100px;
+  font-size: 13px;
+  color: var(--gold-light);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 32px;
+  animation: fadeUp 0.8s ease both;
+}
+
+.hero-badge .dot {
+  width: 8px;
+  height: 8px;
+  background: var(--gold);
+  border-radius: 50%;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(0.8); }
+}
+
+.hero-logo {
+  width: 80px;
+  height: 80px;
+  background: rgba(255,255,255,0.1);
+  border: 2px solid rgba(197,165,90,0.4);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 28px;
+  animation: fadeUp 0.8s ease 0.1s both;
+  backdrop-filter: blur(10px);
+}
+
+.hero-logo svg {
+  width: 40px;
+  height: 40px;
+  fill: var(--gold);
+}
+
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(36px, 6vw, 64px);
+  color: var(--white);
+  font-weight: 600;
+  line-height: 1.15;
+  margin-bottom: 16px;
+  animation: fadeUp 0.8s ease 0.2s both;
+}
+
+.hero h1 span {
+  color: var(--gold);
+}
+
+.hero-sub {
+  font-size: clamp(16px, 2.5vw, 20px);
+  color: rgba(255,255,255,0.7);
+  max-width: 600px;
+  line-height: 1.6;
+  margin-bottom: 40px;
+  font-weight: 300;
+  animation: fadeUp 0.8s ease 0.3s both;
+}
+
+.hero-cta {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+  animation: fadeUp 0.8s ease 0.4s both;
+}
+
+.btn-gold {
+  background: linear-gradient(135deg, var(--gold), #D4B566);
+  color: var(--navy);
+  padding: 16px 36px;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 15px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 24px rgba(197,165,90,0.3);
+}
+
+.btn-gold:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 32px rgba(197,165,90,0.4);
+}
+
+.btn-outline {
+  border: 1px solid rgba(255,255,255,0.3);
+  color: var(--white);
+  padding: 16px 36px;
+  border-radius: 12px;
+  font-weight: 500;
+  font-size: 15px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  background: transparent;
+}
+
+.btn-outline:hover {
+  background: rgba(255,255,255,0.08);
+  border-color: rgba(255,255,255,0.5);
+}
+
+.hero-scroll {
+  position: absolute;
+  bottom: 30px;
+  animation: bounce 2s ease-in-out infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(10px); }
+}
+
+.hero-scroll svg {
+  width: 24px;
+  height: 24px;
+  stroke: rgba(255,255,255,0.4);
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ─── SECTIONS ─── */
+section {
+  padding: 80px 24px;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.section-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--teal);
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.section-label::before {
+  content: '';
+  width: 24px;
+  height: 2px;
+  background: var(--teal);
+}
+
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(28px, 4vw, 44px);
+  color: var(--navy);
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+
+.section-desc {
+  font-size: 16px;
+  color: var(--slate);
+  max-width: 600px;
+  line-height: 1.7;
+  margin-bottom: 48px;
+}
+
+/* ─── GREETING ─── */
+.greeting {
+  background: var(--white);
+  border-radius: 24px;
+  padding: 48px;
+  max-width: 800px;
+  margin: -60px auto 0;
+  position: relative;
+  z-index: 10;
+  box-shadow: 0 20px 60px rgba(11,29,58,0.08);
+  border: 1px solid rgba(197,165,90,0.15);
+}
+
+.greeting-inner {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.greeting-avatar {
+  width: 56px;
+  height: 56px;
+  min-width: 56px;
+  background: linear-gradient(135deg, var(--teal), #24A08E);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.greeting h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  margin-bottom: 8px;
+  color: var(--navy);
+}
+
+.greeting p {
+  color: var(--slate);
+  line-height: 1.7;
+  font-size: 15px;
+}
+
+.greeting .arabic {
+  font-size: 18px;
+  color: var(--teal);
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+
+/* ─── KEY STATS ─── */
+.stats-section {
+  background: var(--white);
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 24px;
+}
+
+.stat-card {
+  background: var(--cream);
+  border-radius: 20px;
+  padding: 32px 24px;
+  text-align: center;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+}
+
+.stat-card:hover {
+  border-color: var(--gold);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(197,165,90,0.1);
+}
+
+.stat-icon {
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(135deg, var(--navy), #1A3D5C);
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+}
+
+.stat-icon svg {
+  width: 24px;
+  height: 24px;
+  stroke: var(--gold);
+  fill: none;
+  stroke-width: 1.5;
+}
+
+.stat-number {
+  font-family: 'Playfair Display', serif;
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 4px;
+}
+
+.stat-label {
+  font-size: 13px;
+  color: var(--slate);
+  font-weight: 500;
+}
+
+/* ─── GALLERY ─── */
+.gallery-section {
+  background: var(--cream);
+}
+
+.gallery-grid {
+  display: grid;
+  gap: 16px;
+}
+
+.gallery-row-1 {
+  grid-template-columns: 2fr 1fr 1fr;
+}
+
+.gallery-row-2 {
+  grid-template-columns: 1fr 1fr 2fr;
+}
+
+.gallery-row-3 {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.gallery-item {
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+  aspect-ratio: 4/3;
+  cursor: pointer;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.05);
+}
+
+.gallery-item .overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 16px 20px;
+  background: linear-gradient(transparent, rgba(11,29,58,0.8));
+  color: white;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+@media (max-width: 768px) {
+  .gallery-row-1, .gallery-row-2, .gallery-row-3 {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-row-1, .gallery-row-2, .gallery-row-3 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ─── FACILITIES ─── */
+.facilities-section {
+  background: var(--white);
+}
+
+.facility-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.facility-item {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  padding: 24px;
+  background: var(--cream);
+  border-radius: 16px;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+}
+
+.facility-item:hover {
+  border-color: var(--gold);
+  box-shadow: 0 8px 24px rgba(197,165,90,0.08);
+}
+
+.facility-dot {
+  width: 12px;
+  height: 12px;
+  min-width: 12px;
+  background: var(--gold);
+  border-radius: 50%;
+  margin-top: 4px;
+}
+
+.facility-item h4 {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--navy);
+  margin-bottom: 4px;
+}
+
+.facility-item p {
+  font-size: 13px;
+  color: var(--slate);
+  line-height: 1.5;
+}
+
+/* ─── INVESTMENT HIGHLIGHT ─── */
+.invest-section {
+  background: linear-gradient(135deg, var(--navy) 0%, #14304D 100%);
+  color: white;
+  border-radius: 0;
+}
+
+.invest-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .invest-grid { grid-template-columns: 1fr; }
+}
+
+.invest-content .section-label {
+  color: var(--gold-light);
+}
+
+.invest-content .section-label::before {
+  background: var(--gold-light);
+}
+
+.invest-content .section-title {
+  color: white;
+}
+
+.invest-content .section-desc {
+  color: rgba(255,255,255,0.7);
+}
+
+.invest-points {
+  list-style: none;
+}
+
+.invest-points li {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.invest-points li:last-child {
+  border-bottom: none;
+}
+
+.invest-check {
+  width: 28px;
+  height: 28px;
+  min-width: 28px;
+  background: rgba(197,165,90,0.2);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.invest-check svg {
+  width: 14px;
+  height: 14px;
+  stroke: var(--gold);
+  fill: none;
+  stroke-width: 2.5;
+}
+
+.invest-points h4 {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.invest-points p {
+  font-size: 13px;
+  color: rgba(255,255,255,0.6);
+  line-height: 1.5;
+}
+
+.invest-card {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 24px;
+  padding: 40px;
+  backdrop-filter: blur(10px);
+}
+
+.invest-card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  margin-bottom: 24px;
+  color: var(--gold-light);
+}
+
+.invest-detail {
+  display: flex;
+  justify-content: space-between;
+  padding: 14px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  font-size: 14px;
+}
+
+.invest-detail:last-child { border-bottom: none; }
+
+.invest-detail .label {
+  color: rgba(255,255,255,0.5);
+}
+
+.invest-detail .value {
+  font-weight: 600;
+  color: white;
+}
+
+/* ─── LOCATION ─── */
+.location-section {
+  background: var(--cream);
+}
+
+.location-card {
+  background: var(--white);
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 12px 40px rgba(11,29,58,0.06);
+}
+
+.location-map {
+  width: 100%;
+  height: 300px;
+  background: var(--light-blue);
+  position: relative;
+}
+
+.location-map iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.location-info {
+  padding: 36px;
+}
+
+.location-info h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  margin-bottom: 12px;
+}
+
+.location-info p {
+  color: var(--slate);
+  line-height: 1.7;
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+
+.location-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--teal-light);
+  color: var(--teal);
+  padding: 8px 16px;
+  border-radius: 100px;
+  font-size: 13px;
+  font-weight: 500;
+  margin-right: 8px;
+  margin-bottom: 8px;
+}
+
+/* ─── CONTACT CTA ─── */
+.cta-section {
+  background: var(--white);
+  text-align: center;
+}
+
+.cta-box {
+  background: linear-gradient(135deg, var(--cream), #FFF8EC);
+  border: 1px solid rgba(197,165,90,0.2);
+  border-radius: 24px;
+  padding: 60px 40px;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.cta-box .section-title {
+  margin-bottom: 12px;
+}
+
+.cta-box p {
+  color: var(--slate);
+  margin-bottom: 32px;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.contact-info-row {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+}
+
+.contact-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--navy);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 15px;
+  padding: 12px 24px;
+  border-radius: 12px;
+  background: var(--white);
+  border: 1px solid rgba(11,29,58,0.1);
+  transition: all 0.3s ease;
+}
+
+.contact-link:hover {
+  border-color: var(--gold);
+  box-shadow: 0 4px 16px rgba(197,165,90,0.15);
+}
+
+.contact-link svg {
+  width: 20px;
+  height: 20px;
+  stroke: var(--teal);
+  fill: none;
+  stroke-width: 1.5;
+}
+
+/* ─── FOOTER ─── */
+footer {
+  background: var(--navy);
+  color: rgba(255,255,255,0.4);
+  text-align: center;
+  padding: 32px 24px;
+  font-size: 13px;
+}
+
+footer span {
+  color: var(--gold);
+}
+
+/* ─── LIGHTBOX ─── */
+.lightbox {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(11,29,58,0.95);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  cursor: zoom-out;
+}
+
+.lightbox.active {
+  display: flex;
+}
+
+.lightbox img {
+  max-width: 90%;
+  max-height: 90vh;
+  object-fit: contain;
+  border-radius: 12px;
+}
+
+/* ─── NAV ─── */
+.top-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding: 16px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.top-nav.scrolled {
+  background: rgba(11,29,58,0.95);
+  backdrop-filter: blur(12px);
+  padding: 12px 24px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.nav-logo-icon {
+  width: 36px;
+  height: 36px;
+  background: rgba(197,165,90,0.2);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-logo-icon svg {
+  width: 18px;
+  height: 18px;
+  fill: var(--gold);
+}
+
+.nav-links {
+  display: flex;
+  gap: 24px;
+}
+
+.nav-links a {
+  color: rgba(255,255,255,0.7);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: var(--gold);
+}
+
+@media (max-width: 768px) {
+  .nav-links { display: none; }
+  .greeting { padding: 32px 24px; margin-top: -40px; }
+  .greeting-inner { flex-direction: column; }
+  .invest-card { padding: 28px; }
+  section { padding: 60px 20px; }
+  .cta-box { padding: 40px 24px; }
+}
+
+/* ─── SCROLL ANIMATIONS ─── */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="top-nav" id="topNav">
+  <a href="#" class="nav-logo">
+    <div class="nav-logo-icon">
+      <svg viewBox="0 0 24 24"><path d="M12 2L12 8M12 16L12 22M2 12L8 12M16 12L22 12M12 8C14.2 8 16 9.8 16 12C16 14.2 14.2 16 12 16C9.8 16 8 14.2 8 12C8 9.8 9.8 8 12 8Z"/></svg>
+    </div>
+    Salsabiluna
+  </a>
+  <div class="nav-links">
+    <a href="#fasilitas">Fasilitas</a>
+    <a href="#galeri">Galeri</a>
+    <a href="#investasi">Investasi</a>
+    <a href="#kontak">Kontak</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-badge">
+    <span class="dot"></span>
+    Peluang Investasi Kesehatan
+  </div>
+  <div class="hero-logo">
+    <svg viewBox="0 0 24 24"><path d="M12 2L12 8M12 16L12 22M2 12L8 12M16 12L22 12M12 8C14.2 8 16 9.8 16 12C16 14.2 14.2 16 12 16C9.8 16 8 14.2 8 12C8 9.8 9.8 8 12 8Z"/></svg>
+  </div>
+  <h1>Klinik Pratama<br><span>Salsabiluna</span></h1>
+  <p class="hero-sub">Klinik rawat inap modern di Tasikmalaya dengan fasilitas lengkap, siap untuk pertumbuhan — mencari mitra investasi strategis.</p>
+  <div class="hero-cta">
+    <a href="#investasi" class="btn-gold">Lihat Peluang Investasi</a>
+    <a href="#galeri" class="btn-outline">Jelajahi Fasilitas</a>
+  </div>
+  <div class="hero-scroll">
+    <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
+  </div>
+</section>
+
+<!-- GREETING -->
+<div class="greeting reveal">
+  <div class="greeting-inner">
+    <div class="greeting-avatar">R</div>
+    <div>
+      <p class="arabic">Assalamualaikum Warahmatullahi Wabarakatuh</p>
+      <h3>dr. Rifqi</h3>
+      <p>Perkenalkan, saya dr. Rifqi — pemilik dan pengelola Klinik Pratama Salsabiluna. Klinik kami telah beroperasi di bawah naungan <strong>PT Anandara Sukses Berkah</strong> dengan izin operasional hingga tahun 2027. Kami membuka kesempatan bagi investor yang ingin bergabung mengembangkan layanan kesehatan berkualitas di wilayah Tasikmalaya dan sekitarnya.</p>
+    </div>
+  </div>
+</div>
+
+<!-- KEY STATS -->
+<section class="stats-section" style="padding-top: 100px;">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-card reveal">
+        <div class="stat-icon">
+          <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/></svg>
+        </div>
+        <div class="stat-number">1.960 m²</div>
+        <div class="stat-label">Luas Tanah</div>
+      </div>
+      <div class="stat-card reveal">
+        <div class="stat-icon">
+          <svg viewBox="0 0 24 24"><path d="M3 21V7l9-4 9 4v14"/><path d="M9 21V11h6v10"/></svg>
+        </div>
+        <div class="stat-number">720 m²</div>
+        <div class="stat-label">Luas Bangunan</div>
+      </div>
+      <div class="stat-card reveal">
+        <div class="stat-icon">
+          <svg viewBox="0 0 24 24"><path d="M4 19V5a2 2 0 012-2h8l6 6v10a2 2 0 01-2 2H6a2 2 0 01-2-2z"/></svg>
+        </div>
+        <div class="stat-number">2027</div>
+        <div class="stat-label">Izin Operasional</div>
+      </div>
+      <div class="stat-card reveal">
+        <div class="stat-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+        </div>
+        <div class="stat-number">5 Kamar</div>
+        <div class="stat-label">Rawat Inap (max 10 bed)</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery-section" id="galeri">
+  <div class="container">
+    <div class="section-label reveal">Galeri</div>
+    <h2 class="section-title reveal">Fasilitas Modern &<br>Siap Berkembang</h2>
+    <p class="section-desc reveal">Dibangun oleh kontraktor profesional Square Living Bandung, klinik ini dirancang dengan pola desain yang sudah disiapkan untuk perluasan hingga 2–3 lantai.</p>
+
+    <div class="gallery-grid gallery-row-1" style="margin-bottom: 16px;">
+      <div class="gallery-item reveal" onclick="openLightbox(this)">
+        <img src="./113625.jpg" alt="Tampak Depan Klinik" loading="lazy">
+        <div class="overlay">Tampak Depan Klinik</div>
+      </div>
+      <div class="gallery-item reveal" onclick="openLightbox(this)">
+        <img src="./113628.jpg" alt="Pintu Poli Rawat Jalan" loading="lazy">
+        <div class="overlay">Pintu Poli Rawat Jalan</div>
+      </div>
+      <div class="gallery-item reveal" onclick="openLightbox(this)">
+        <img src="./113639.jpg" alt="UGD & Unit Gawat Darurat" loading="lazy">
+        <div class="overlay">UGD — 3 Bed</div>
+      </div>
+    </div>
+
+    <div class="gallery-grid gallery-row-2" style="margin-bottom: 16px;">
+      <div class="gallery-item reveal" onclick="openLightbox(this)">
+        <img src="./113640.jpg" alt="Instalasi Farmasi" loading="lazy">
+        <div class="overlay">Farmasi & Kasir</div>
+      </div>
+      <div class="gallery-item reveal" onclick="openLightbox(this)">
+        <img src="./113631.jpg" alt="Laboratorium" loading="lazy">
+        <div class="overlay">Laboratorium</div>
+      </div>
+      <div class="gallery-item reveal" onclick="openLightbox(this)">
+        <img src="./113633.jpg" alt="Pendaftaran & Poli" loading="lazy">
+        <div class="overlay">Pendaftaran & Poli</div>
+      </div>
+    </div>
+
+    <div class="gallery-grid gallery-row-3">
+      <div class="gallery-item reveal" onclick="openLightbox(this)">
+        <img src="./113627.jpg" alt="Kamar Rawat Inap" loading="lazy">
+        <div class="overlay">Kamar Rawat Inap</div>
+      </div>
+      <div class="gallery-item reveal" onclick="openLightbox(this)">
+        <img src="./113635.jpg" alt="Layanan Kecantikan" loading="lazy">
+        <div class="overlay">Layanan Kecantikan</div>
+      </div>
+      <div class="gallery-item reveal" onclick="openLightbox(this)">
+        <img src="./113636.jpg" alt="Fasilitas Pendukung" loading="lazy">
+        <div class="overlay">Mushola, Playground, Parkir</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FACILITIES -->
+<section class="facilities-section" id="fasilitas">
+  <div class="container">
+    <div class="section-label reveal">Fasilitas</div>
+    <h2 class="section-title reveal">Fasilitas Lengkap &<br>Terintegrasi</h2>
+    <p class="section-desc reveal">Klinik dilengkapi dengan berbagai fasilitas medis dan penunjang untuk memberikan pelayanan terbaik kepada pasien.</p>
+
+    <div class="facility-list">
+      <div class="facility-item reveal">
+        <div class="facility-dot"></div>
+        <div>
+          <h4>IGD (Unit Gawat Darurat)</h4>
+          <p>Standby 3 bed dengan peralatan lengkap, siap melayani 24 jam</p>
+        </div>
+      </div>
+      <div class="facility-item reveal">
+        <div class="facility-dot"></div>
+        <div>
+          <h4>Rawat Inap</h4>
+          <p>5 kamar tersedia, kapasitas hingga 10 bed. Kamar luas dengan kamar mandi dalam</p>
+        </div>
+      </div>
+      <div class="facility-item reveal">
+        <div class="facility-dot"></div>
+        <div>
+          <h4>Poliklinik</h4>
+          <p>4 ruangan tersedia (2 aktif: Poli Umum & Ruang Treatment), siap ekspansi</p>
+        </div>
+      </div>
+      <div class="facility-item reveal">
+        <div class="facility-dot"></div>
+        <div>
+          <h4>Instalasi Farmasi</h4>
+          <p>Apotek terintegrasi dengan stok obat lengkap untuk kebutuhan pasien</p>
+        </div>
+      </div>
+      <div class="facility-item reveal">
+        <div class="facility-dot"></div>
+        <div>
+          <h4>Laboratorium</h4>
+          <p>Lab dengan peralatan modern untuk pemeriksaan darah dan sampel</p>
+        </div>
+      </div>
+      <div class="facility-item reveal">
+        <div class="facility-dot"></div>
+        <div>
+          <h4>Layanan Kecantikan</h4>
+          <p>Ruang treatment estetika dengan peralatan kecantikan profesional</p>
+        </div>
+      </div>
+      <div class="facility-item reveal">
+        <div class="facility-dot"></div>
+        <div>
+          <h4>IPAL & Genset</h4>
+          <p>Instalasi pengolahan air limbah dan generator cadangan untuk keandalan operasional</p>
+        </div>
+      </div>
+      <div class="facility-item reveal">
+        <div class="facility-dot"></div>
+        <div>
+          <h4>Fasilitas Pendukung</h4>
+          <p>Mushola, playground anak indoor, parkir luas depan & belakang, taman</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INVESTMENT -->
+<section class="invest-section" id="investasi">
+  <div class="container">
+    <div class="invest-grid">
+      <div class="invest-content">
+        <div class="section-label reveal">Peluang Investasi</div>
+        <h2 class="section-title reveal">Mengapa Berinvestasi<br>di Salsabiluna?</h2>
+        <p class="section-desc reveal">Kabupaten Tasikmalaya memiliki potensi besar di sektor kesehatan dengan hanya 3 rumah sakit yang beroperasi saat ini.</p>
+
+        <ul class="invest-points">
+          <li class="reveal">
+            <div class="invest-check"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg></div>
+            <div>
+              <h4>Minim Kompetitor</h4>
+              <p>Hanya 3 RS di Kabupaten Tasik (RS Respati, RS TNT, RS KHZ Mustopa) — peluang pasar yang besar</p>
+            </div>
+          </li>
+          <li class="reveal">
+            <div class="invest-check"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg></div>
+            <div>
+              <h4>Siap Ekspansi Vertikal</h4>
+              <p>Fondasi bangunan dirancang untuk perluasan 2–3 lantai tanpa konstruksi ulang</p>
+            </div>
+          </li>
+          <li class="reveal">
+            <div class="invest-check"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg></div>
+            <div>
+              <h4>Potensi Perluasan Horizontal</h4>
+              <p>Area kanan, kiri, dan belakang masih berupa sawah — tersedia untuk akuisisi lahan</p>
+            </div>
+          </li>
+          <li class="reveal">
+            <div class="invest-check"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg></div>
+            <div>
+              <h4>Legalitas Lengkap</h4>
+              <p>Izin operasional aktif hingga 2027 di bawah PT Anandara Sukses Berkah</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="invest-card reveal">
+        <h3>Ringkasan Aset</h3>
+        <div class="invest-detail">
+          <span class="label">Nama Klinik</span>
+          <span class="value">Klinik Pratama Salsabiluna</span>
+        </div>
+        <div class="invest-detail">
+          <span class="label">Tipe</span>
+          <span class="value">Rawat Inap</span>
+        </div>
+        <div class="invest-detail">
+          <span class="label">Badan Hukum</span>
+          <span class="value">PT Anandara Sukses Berkah</span>
+        </div>
+        <div class="invest-detail">
+          <span class="label">Total Luas Tanah</span>
+          <span class="value">1.960 m²</span>
+        </div>
+        <div class="invest-detail">
+          <span class="label">Total Luas Bangunan</span>
+          <span class="value">720 m²</span>
+        </div>
+        <div class="invest-detail">
+          <span class="label">Kontraktor</span>
+          <span class="value">Square Living Bandung</span>
+        </div>
+        <div class="invest-detail">
+          <span class="label">Izin Operasional</span>
+          <span class="value">Aktif s/d 2027</span>
+        </div>
+        <div class="invest-detail">
+          <span class="label">Kapasitas Rawat Inap</span>
+          <span class="value">5 Kamar (max 10 bed)</span>
+        </div>
+        <div class="invest-detail">
+          <span class="label">Poliklinik</span>
+          <span class="value">4 Ruangan (2 aktif)</span>
+        </div>
+        <div class="invest-detail">
+          <span class="label">Ekspansi</span>
+          <span class="value">Siap 2-3 Lantai</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LOCATION -->
+<section class="location-section" id="lokasi">
+  <div class="container">
+    <div class="section-label reveal">Lokasi</div>
+    <h2 class="section-title reveal">Lokasi Strategis di<br>Kabupaten Tasikmalaya</h2>
+    <p class="section-desc reveal">Terletak di jalur utama Cipanas Galunggung, area wisata dan pemukiman yang terus berkembang.</p>
+
+    <div class="location-card reveal">
+      <div class="location-map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3955.8!2d108.1!3d-7.3!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zN8KwMTgnMDAuMCJTIDEwOMKwMDYnMDAuMCJF!5e0!3m2!1sid!2sid!4v1700000000000!5m2!1sid!2sid" loading="lazy"></iframe>
+      </div>
+      <div class="location-info">
+        <h3>Jl. Cipanas Galunggung No. 8</h3>
+        <p>Tawangbanteng, Sukaratu, Kabupaten Tasikmalaya, Jawa Barat</p>
+        <div>
+          <span class="location-tag">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Jalur Wisata Galunggung
+          </span>
+          <span class="location-tag">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21V7l9-4 9 4v14"/></svg>
+            Area Berkembang
+          </span>
+          <span class="location-tag">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83"/></svg>
+            Minim Kompetitor RS
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT CTA -->
+<section class="cta-section" id="kontak">
+  <div class="container">
+    <div class="cta-box reveal">
+      <div class="section-label" style="justify-content: center;">Hubungi Kami</div>
+      <h2 class="section-title">Tertarik Berinvestasi?</h2>
+      <p>Hubungi dr. Rifqi untuk diskusi lebih lanjut mengenai peluang kerjasama dan investasi di Klinik Pratama Salsabiluna.</p>
+      <div class="contact-info-row">
+        <a href="#" class="contact-link">
+          <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.362 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          Hubungi dr. Rifqi
+        </a>
+        <a href="#" class="contact-link">
+          <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          Kirim Email
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>&copy; 2026 <span>Klinik Pratama Salsabiluna</span> — PT Anandara Sukses Berkah. All rights reserved.</p>
+</footer>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <img id="lightboxImg" src="" alt="">
+</div>
+
+<script>
+// Scroll reveal
+const reveals = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+reveals.forEach(el => observer.observe(el));
+
+// Navbar scroll
+const nav = document.getElementById('topNav');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 60);
+});
+
+// Lightbox
+function openLightbox(el) {
+  const img = el.querySelector('img');
+  document.getElementById('lightboxImg').src = img.src;
+  document.getElementById('lightbox').classList.add('active');
+}
+
+function closeLightbox() {
+  document.getElementById('lightbox').classList.remove('active');
+}
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') closeLightbox();
+});
+</script>
+
+</body>
+</html>
